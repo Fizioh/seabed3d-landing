@@ -8,10 +8,14 @@ import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiProgress from "components/VuiProgress";
 
+
 // Vision UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import HomeNavbar from "examples/Navbars/HomeNavbar";
+
 import Footer from "examples/Footer";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
 import linearGradient from "assets/theme/functions/linearGradient";
@@ -49,7 +53,11 @@ function Dashboard() {
 
   return (
     <PageLayout>
-      <Navbar />
+      <VuiBox sx={{ height: '2000px'}}>
+      <DefaultNavbar />
+
+
+      </VuiBox>
       
     </PageLayout>
   );

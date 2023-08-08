@@ -47,12 +47,15 @@ function DefaultNavbar({ transparent, light, action }) {
   const { borderWidth } = borders;
   const [mobileNavbar, setMobileNavbar] = useState(false);
   const [mobileView, setMobileView] = useState(false);
+  const [navbarType, setNavbarType] = useState("sticky");
+
 
   const openMobileNavbar = ({ currentTarget }) => setMobileNavbar(currentTarget.parentNode);
   const closeMobileNavbar = () => setMobileNavbar(false);
 
   useEffect(() => {
     // A function that sets the display state for the DefaultNavbarMobile.
+    
     function displayMobileNavbar() {
       if (window.innerWidth < breakpoints.values.lg) {
         setMobileView(true);
@@ -62,6 +65,7 @@ function DefaultNavbar({ transparent, light, action }) {
         setMobileNavbar(false);
       }
     }
+    
 
     /** 
      The event listener that's calling the displayMobileNavbar function when 
@@ -77,23 +81,29 @@ function DefaultNavbar({ transparent, light, action }) {
   }, []);
 
   return (
-    <Container>
+    <VuiBox display="flex"
+    justifyContent="center"
+    alignItems="center"
+    sx={{
+      marginTop: '50px'
+    }}
+
+    >
       <VuiBox
         py={2}
         px={{ xs: transparent ? 4 : 3, sm: transparent ? 2 : 3, lg: transparent ? 0 : 3 }}
         my={2}
         border={`${borderWidth[1]} solid ${borderCol.navbar}`}
-        width="calc(100% - 48px)"
+        width="98%"
         borderRadius="xl"
         shadow={transparent ? "none" : "md"}
         color={light ? "white" : "dark"}
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        position="absolute"
+        position="fixed"
         left="50%"
         zIndex={3}
-        maxWidth="1044px"
         sx={({ palette: { gradients }, functions: { linearGradient } }) => ({
           backgroundColor: linearGradient(
             gradients.navbar.main,
@@ -116,12 +126,12 @@ function DefaultNavbar({ transparent, light, action }) {
               margin: "0 auto",
             }}
           >
-            VISION UI FREE
+            SEABED 3D
           </VuiTypography>
         </VuiBox>
         <VuiBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
           <DefaultNavbarLink icon="donut_large" name="dashboard" route="/dashboard" />
-          <DefaultNavbarLink icon="person" name="profile" route="/profile" />
+          {/* <DefaultNavbarLink icon="person" name="profile" route="/profile" /> */}
           <DefaultNavbarLink icon="account_circle" name="sign up" route="/authentication/sign-up" />
           <DefaultNavbarLink icon="key" name="sign in" route="/authentication/sign-in" />
         </VuiBox>
@@ -174,7 +184,7 @@ function DefaultNavbar({ transparent, light, action }) {
         </VuiBox>
       </VuiBox>
       {mobileView && <DefaultNavbarMobile open={mobileNavbar} close={closeMobileNavbar} />}
-    </Container>
+    </VuiBox>
   );
 }
 
