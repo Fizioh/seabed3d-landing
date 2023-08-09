@@ -61,7 +61,7 @@ function SignIn() {
       description="Use these awesome forms to login or create new account in your project for free."
       image={bgSignIn}
       premotto="INSPIRED BY THE FUTURE:"
-      motto="THE VISION UI DASHBOARD"
+      motto="SEABED 3D DASHBOARD"
       cardContent
     >
       <GradientBorder borderRadius={borders.borderRadius.form} minWidth="100%" maxWidth="100%">

@@ -103,14 +103,13 @@ function DefaultNavbar({ transparent, light, action }) {
         alignItems="center"
         position="fixed"
         left="50%"
-        zIndex={3}
+        zIndex={99}
         sx={({ palette: { gradients }, functions: { linearGradient } }) => ({
-          backgroundColor: linearGradient(
-            gradients.navbar.main,
-            gradients.navbar.state,
-            gradients.navbar.deg
-          ),
-          backdropFilter: "blur(42px)",
+          background: "rgba(255, 255, 255, 0.05)",
+          borderRadius: 16,
+          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+          backdropFilter: "blur(8.1px)",
+          "-webkit-backdrop-filter": "blur(8.1px)",
           transform: "translate(-50%, 0px)",
         })}
       >

@@ -26,11 +26,11 @@ import colors from "assets/theme/base/colors";
 
 // Dashboard layout components
 import Navbar from "layouts/home/components/Navbar";
-import WelcomeMark from "layouts/dashboard/components/WelcomeMark";
-import Projects from "layouts/dashboard/components/Projects";
-import OrderOverview from "layouts/dashboard/components/OrderOverview";
-import SatisfactionRate from "layouts/dashboard/components/SatisfactionRate";
-import ReferralTracking from "layouts/dashboard/components/ReferralTracking";
+import Hero from "layouts/home/components/Hero";
+import Projects from "layouts/home/components/Projects";
+import OrderOverview from "layouts/home/components/OrderOverview";
+import SatisfactionRate from "layouts/home/components/SatisfactionRate";
+import ReferralTracking from "layouts/home/components/ReferralTracking";
 
 // React icons
 import { IoIosRocket } from "react-icons/io";
@@ -55,6 +55,7 @@ function Dashboard() {
     <PageLayout>
       <VuiBox sx={{ height: '2000px'}}>
       <DefaultNavbar />
+      <Hero />
 
 
       </VuiBox>
