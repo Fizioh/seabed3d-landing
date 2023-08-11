@@ -15,6 +15,8 @@ import PageLayout from "examples/LayoutContainers/PageLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import HomeNavbar from "examples/Navbars/HomeNavbar";
+import Pricing from "examples/Pricing";
+
 
 import Footer from "examples/Footer";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
@@ -56,6 +58,7 @@ function Dashboard() {
       <VuiBox sx={{ height: '2000px'}}>
       <DefaultNavbar />
       <Hero />
+      <Pricing />
 
 
       </VuiBox>

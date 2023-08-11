@@ -9,7 +9,7 @@ import gif from "assets/images/image.png";
 const Hero = () => {
   return (
     <Card sx={() => ({
-      height: "100%",
+      height: "50%",
       mt: "-50px",
       py: "32px",
       backgroundImage: `url(${gif})`,
@@ -17,7 +17,7 @@ const Hero = () => {
       backgroundPosition: "50%"
     })}>
       <VuiBox height="45%" display="flex" flexDirection="column" justifyContent="space-between" >
-        <VuiBox textAlign="center" mt="208px">
+        <VuiBox textAlign="center" mt="160px">
           <VuiTypography color="white" variant="h2" fontWeight="regular" mb="26px">
           Welcome to the
           </VuiTypography>           
@@ -53,8 +53,8 @@ const Hero = () => {
             padding: "12px",
             backgroundColor: "#5D8AA8",
             position: "fixed",
-            top: "40%",
-            right: "20px",
+            top: "80%",
+            right: "130px",
             bottom: "20px",
 
             "& .material-icons-round": {
