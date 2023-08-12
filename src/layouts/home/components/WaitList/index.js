@@ -38,10 +38,10 @@ const WaitList = () => {
       <VuiBox display="flex" flexDirection="column" sx={{ height: "100%" }}>
         <VuiBox display="flex" flexDirection="column" mb="auto">
           <VuiTypography color="white" variant="h3" fontWeight="bold" mb="3px">
-            Welcome back!
+            Welcome aboard!
           </VuiTypography>
           <VuiTypography color="white" variant="button" fontWeight="regular">
-            Nice to see you, Mark Johnson!
+            Suscribe to our wait list to be part of our 3D journey
           </VuiTypography>
         </VuiBox>
         <VuiBox justifySelf="flex-end">
@@ -69,7 +69,7 @@ const WaitList = () => {
               },
             }}
           >
-            Tap to record
+            Join the waitlist
             <Icon sx={{ fontWeight: "bold", ml: "5px" }}>arrow_forward</Icon>
           </VuiTypography>
         </VuiBox>
