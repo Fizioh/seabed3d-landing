@@ -49,6 +49,7 @@ import { lineChartDataDashboard } from "layouts/dashboard/data/lineChartData";
 import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptions";
 import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
+import WaitList from "./components/WaitList";
 
 function Dashboard() {
   const { gradients } = colors;
@@ -59,7 +60,7 @@ function Dashboard() {
       <DefaultNavbar />
       <Hero />
       <Pricing />
-
+      <WaitList />
 
       </VuiBox>
       
